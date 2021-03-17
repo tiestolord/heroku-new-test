@@ -14,8 +14,8 @@ def index():
 def about():
 
     user_name = "Ivan"
-    programming_languages = ["Python", "Javascript", "HTML"]
-    mood = "sad"
+    programming_languages = ["Python", "Javascript", "HTML", "CSS"]
+    mood = "happy"
 
     return render_template("/about.html",
                            user_name=user_name,
