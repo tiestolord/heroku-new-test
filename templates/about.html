@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-    <head>
-        <meta charset="UTF-8">
-        <title>About, SmartNinja</title>
-    </head>
-
-    <body>
         <h1>About SmartNinja</h1>
 
         <ul>
@@ -19,7 +13,6 @@
         <p>About site from SmartNinja</p>
         <h2>Languages</h2>
         <ul>
-
             {% for language in languages %}
                 <li>{{language}}</li>
             {% endfor %}
@@ -33,5 +26,5 @@
             <li>HTML</li>
             <li>CSS</li>
         </ul>
-    </body>
-</html>
+
+{% endblock content %}
