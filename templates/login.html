@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Login SmartNinja</h1>
+
+<form method="post" action="/login">
+    <input type="text" name="login-account" placeholder="Enter your Account name">
+    <br>
+
+    <input type="password" name="login-password" placeholder="Enter your password">
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock content %}
