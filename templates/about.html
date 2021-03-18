@@ -1,26 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>About SmartNinja</h1>
-    <ul>
-        <li><a href="/"> Home;)</a></li>
-        <li><a href="/about"> About ;)</a></li>
-    </ul>
+<h1>About SmartNinja</h1>
 
-    Hello, my name is {{user_name}}!
+<ul>
+    <li><a href="/"> Home;)</a></li>
+    <li><a href="/about"> About ;)</a></li>
+</ul>
 
-    <p>About site from SmartNinja</p>
+Hello, my name is {{user_name}}!
 
-    <h2>Languages</h2>
+<p>About site from SmartNinja</p>
 
-    <ul>
-        {% for language in languages %}
-            <li>{{language}}</li>
-        {% endfor %}
+<h2>Languages</h2>
 
-        {% if mood %}
-            <p>I am {{mood}}</p>
-        {% endif %}
-    </ul>
+<ul>
+    {% for language in languages %}
+        <li>{{language}}</li>
+    {% endfor %}
+
+    {% if mood %}
+        <p>I am {{mood}}</p>
+    {% endif %}
+</ul>
+
+<form method="post" action="/contact">
+    <input type="text" name="contact-name" placeholder="Enter your name">
+    <br>
+
+    <input type="email" name="contact-email" placeholder="Enter email address">
+    <br>
+
+    <textarea name="contact-message" placeholder="Enter your message"></textarea>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
 
 {% endblock content %}
